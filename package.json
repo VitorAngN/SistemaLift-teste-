@@ -1,0 +1,14 @@
+{
+  "name": "projeto-lift",
+  "version": "1.0.0",
+  "description": "Lista de pedidos e tela de informações do pedido consumindo a API do Sistema Lift",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test",
+    "coletar": "node scripts/coletar-dados.js"
+  }
+}
