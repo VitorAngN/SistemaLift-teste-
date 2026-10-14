@@ -1,21 +1,36 @@
 // Camada de acesso à API do Sistema Lift.
-// É o ÚNICO arquivo do projeto que sabe a URL da API e faz requisições HTTP.
+// É o ÚNICO arquivo do projeto que faz requisições HTTP para a Lift.
 // O resto do código chama estas funções e recebe os dados já em objeto JS.
 
-const BASE_URL = 'https://sistemalift1.com.br/lift_ps/api';
-const TIMEOUT_MS = 5000;
+import { LIFT_API_URL, TIMEOUT_MS } from '../config.js';
+import { ErroApiLift } from '../utils/erros.js';
 
 async function buscar(caminho) {
-  const url = `${BASE_URL}/${caminho}`;
+  const url = `${LIFT_API_URL}/${caminho}`;
 
-  // AbortSignal.timeout cancela a requisição se a API demorar demais.
-  const resposta = await fetch(url, { signal: AbortSignal.timeout(TIMEOUT_MS) });
-
-  if (!resposta.ok) {
-    throw new Error(`Falha ao buscar ${url}: HTTP ${resposta.status}`);
+  let resposta;
+  try {
+    // AbortSignal.timeout cancela a requisição se a API demorar demais.
+    resposta = await fetch(url, { signal: AbortSignal.timeout(TIMEOUT_MS) });
+  } catch (erro) {
+    // A requisição nem teve resposta: estourou o tempo ou a rede falhou.
+    const motivo =
+      erro.name === 'TimeoutError' ? `não respondeu em ${TIMEOUT_MS} ms` : 'está inacessível';
+    throw new ErroApiLift(`A API Lift ${motivo} (${caminho})`, { cause: erro });
   }
 
-  return resposta.json();
+  // O fetch NÃO lança erro para 404 ou 500: a verificação é manual.
+  if (!resposta.ok) {
+    throw new ErroApiLift(`A API Lift respondeu HTTP ${resposta.status} (${caminho})`);
+  }
+
+  try {
+    return await resposta.json();
+  } catch (erro) {
+    throw new ErroApiLift(`A API Lift devolveu uma resposta que não é JSON (${caminho})`, {
+      cause: erro,
+    });
+  }
 }
 
 // Um método para cada endpoint descrito no e-mail.
