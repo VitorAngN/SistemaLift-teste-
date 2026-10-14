@@ -1,6 +1,4 @@
-// Configuração do projeto, lida de variáveis de ambiente com valores padrão.
-// Assim dá para mudar a porta ou a URL da API sem mexer no código.
-// Exemplo no PowerShell:  $env:PORT = 4000; npm start
+// Configuração lida de variáveis de ambiente, com valores padrão.
 
 export const PORTA = Number(process.env.PORT) || 3000;
 

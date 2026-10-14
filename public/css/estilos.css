@@ -152,7 +152,7 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
-/* O código do pedido é o link para a tela de detalhe (a seta do modelo). */
+/* O código do pedido é o link para a tela de detalhe. */
 .link-pedido {
   color: var(--ciano-escuro);
   font-weight: 600;

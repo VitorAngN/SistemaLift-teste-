@@ -1,6 +1,5 @@
 // Tela "Lista de Pedidos": busca /api/pedidos e monta a tabela.
-// Tudo é criado com createElement + textContent (nunca innerHTML): assim um
-// texto vindo da API nunca é interpretado como HTML (proteção contra XSS).
+// Os textos entram com textContent, nunca innerHTML, para evitar XSS.
 
 import { buscarJson } from './api.js';
 import { formatarMoeda, formatarData } from './formatar.js';
@@ -57,7 +56,7 @@ function mostrarMensagem(texto, tipo, comBotao = false) {
 }
 
 function mostrarResumo(pedidos) {
-  // Soma em centavos inteiros, pelo mesmo motivo do back-end (IEEE 754).
+  // Soma em centavos para evitar erro de arredondamento.
   const totalCentavos = pedidos.reduce((soma, p) => soma + Math.round(p.valorTotal * 100), 0);
 
   const quantidade = document.createElement('strong');

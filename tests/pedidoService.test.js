@@ -9,7 +9,7 @@ import {
 import { ErroApiLift, ErroNaoEncontrado } from '../src/utils/erros.js';
 import { clientes, pedidos, produtos, itens } from './fixtures.js';
 
-// Oráculo: totais calculados à mão na planilha lift_dados_api.xlsx.
+// Oráculo: totais conferidos à mão, item por item.
 const TOTAIS_ESPERADOS = {
   1: 2693, 2: 13696, 3: 1197, 4: 3588, 5: 10772,
   6: 38376, 7: 4394, 8: 799, 9: 2295, 10: 4487,

@@ -1,8 +1,7 @@
 // Busca as 4 listas da API Lift e salva cada uma em dados/<nome>.json.
 // Uso: npm run coletar
 //
-// Serve para estudar o formato dos dados e, depois, como dados de exemplo
-// para os testes.
+// Os arquivos gerados servem de dados para os testes.
 
 import { mkdir, writeFile } from 'node:fs/promises';
 import {

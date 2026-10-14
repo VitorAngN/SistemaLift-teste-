@@ -51,7 +51,6 @@
   letter-spacing: 0.14em;
 }
 
-/* <dl>: lista de "rótulo -> valor", o HTML certo para dados como estes. */
 .dados-cliente {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

@@ -1,5 +1,5 @@
-// Monta a aplicação Express: arquivos das telas, rotas da API e tratamento de erros.
-// Fica separado do server.js para os testes subirem o app sem ocupar a porta 3000.
+// Monta a aplicação Express. Fica separado do server.js para os testes
+// poderem subir o app numa porta qualquer.
 
 import express from 'express';
 import { fileURLToPath } from 'node:url';

@@ -1,5 +1,4 @@
-// Formatação para exibir na tela. A API devolve dados "crus" (data ISO, número)
-// e o front decide como mostrar: separar dado de apresentação.
+// Formatação dos dados para exibir na tela (a API devolve data ISO e números).
 
 const moeda = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
 const numero = new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 3 });
