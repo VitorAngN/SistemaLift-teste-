@@ -46,7 +46,7 @@ describe('montarListaPedidos', () => {
     assert.deepEqual(lista.map((p) => p.id), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
   });
 
-  it('calcula o total de cada pedido igual ao da planilha', () => {
+  it('calcula o total de cada pedido igual ao conferido à mão', () => {
     for (const pedido of lista) {
       assert.equal(pedido.valorTotal, TOTAIS_ESPERADOS[pedido.id], `pedido ${pedido.id}`);
     }
@@ -123,7 +123,7 @@ describe('montarDetalhePedido', () => {
     });
   });
 
-  it('confere o total de todos os pedidos com a planilha', () => {
+  it('confere o total de todos os pedidos com o oráculo', () => {
     for (const pedido of pedidos) {
       const detalhe = montarDetalhePedido(entradaDoDetalhe(pedido.id));
       assert.equal(detalhe.valorTotal, TOTAIS_ESPERADOS[pedido.id], `pedido ${pedido.id}`);
