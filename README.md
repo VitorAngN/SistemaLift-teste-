@@ -160,6 +160,21 @@ Cada etapa entrou por um pull request próprio, com commits pequenos no padrão 
 - Cache com tempo de expiração para clientes e produtos, que mudam pouco.
 - Testes de ponta a ponta das telas (Playwright).
 
+## Ferramentas utilizadas
+
+| Ferramenta | Para quê |
+| --- | --- |
+| Node.js 22 e npm | Execução do servidor e dos scripts |
+| Express 5 | Servidor HTTP e rotas da API interna |
+| node:test | Testes automatizados |
+| Git, GitHub e GitHub Actions | Versionamento, pull requests e testes automáticos (CI) |
+| VS Code | Editor de código |
+| Postman e navegador | Exploração da API do Sistema Lift |
+| Excel | Planilha para entender os dados da API e conferir os totais dos pedidos |
+| Claude (Anthropic) | Assistente de IA |
+
+O projeto foi desenvolvido com o auxílio do Claude, assistente de IA da Anthropic, no planejamento, na escrita e na revisão do código.
+
 ---
 
 Desenvolvido por **João Vitor Angelim Nogueira** ([@VitorAngN](https://github.com/VitorAngN)).
