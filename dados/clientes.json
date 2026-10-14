@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "nome": "Vitória Luzia da Rocha",
+    "cpf": "736.625.129-12",
+    "email": "vvitorialuziadarocha@yahoo.com.com.br"
+  },
+  {
+    "id": 2,
+    "nome": "Yuri Arthur Sales",
+    "cpf": "322.301.407-10",
+    "email": "yuriarthursales__yuriarthursales@publicarbrasil.com.br"
+  },
+  {
+    "id": 3,
+    "nome": "Sérgio Theo Galvão",
+    "cpf": "039.438.599-32",
+    "email": "sergiotheogalvao-89@engemed.com"
+  },
+  {
+    "id": 4,
+    "nome": "Cláudia Emilly Monteiro",
+    "cpf": "489.366.233-38",
+    "email": "claudiaemillymonteiro_@negocios-de-valor.com"
+  },
+  {
+    "id": 5,
+    "nome": "Bernardo Kaique Souza",
+    "cpf": "846.893.336-88",
+    "email": "bernardokaiquesouza__bernardokaiquesouza@octagonbrasil.com.br"
+  },
+  {
+    "id": 6,
+    "nome": "Elaine Helena Jennifer da Rosa",
+    "cpf": "134.826.250-85",
+    "email": "elainehelenajenniferdarosa_@ozzape.com"
+  },
+  {
+    "id": 7,
+    "nome": "Malu Tereza Duarte",
+    "cpf": "064.239.021-51",
+    "email": "mmaluterezaduarte@eguia.com.br"
+  },
+  {
+    "id": 8,
+    "nome": "Isadora Giovanna Assis",
+    "cpf": "327.551.257-99",
+    "email": "isadoragiovannaassis__isadoragiovannaassis@lojapetline.com.br"
+  }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "pedido": 1,
+    "produto": 1,
+    "quantidade": 1
+  },
+  {
+    "pedido": 1,
+    "produto": 5,
+    "quantidade": 6
+  },
+  {
+    "pedido": 2,
+    "produto": 4,
+    "quantidade": 1
+  },
+  {
+    "pedido": 2,
+    "produto": 2,
+    "quantidade": 2
+  },
+  {
+    "pedido": 2,
+    "produto": 6,
+    "quantidade": 1
+  },
+  {
+    "pedido": 3,
+    "produto": 7,
+    "quantidade": 1
+  },
+  {
+    "pedido": 3,
+    "produto": 5,
+    "quantidade": 2
+  },
+  {
+    "pedido": 4,
+    "produto": 3,
+    "quantidade": 12
+  },
+  {
+    "pedido": 5,
+    "produto": 1,
+    "quantidade": 4
+  },
+  {
+    "pedido": 5,
+    "produto": 5,
+    "quantidade": 24
+  },
+  {
+    "pedido": 6,
+    "produto": 2,
+    "quantidade": 12
+  },
+  {
+    "pedido": 6,
+    "produto": 6,
+    "quantidade": 12
+  },
+  {
+    "pedido": 7,
+    "produto": 2,
+    "quantidade": 1
+  },
+  {
+    "pedido": 7,
+    "produto": 6,
+    "quantidade": 1
+  },
+  {
+    "pedido": 7,
+    "produto": 3,
+    "quantidade": 4
+  },
+  {
+    "pedido": 8,
+    "produto": 7,
+    "quantidade": 1
+  },
+  {
+    "pedido": 9,
+    "produto": 1,
+    "quantidade": 1
+  },
+  {
+    "pedido": 9,
+    "produto": 5,
+    "quantidade": 4
+  },
+  {
+    "pedido": 10,
+    "produto": 1,
+    "quantidade": 1
+  },
+  {
+    "pedido": 10,
+    "produto": 3,
+    "quantidade": 6
+  },
+  {
+    "pedido": 10,
+    "produto": 5,
+    "quantidade": 6
+  }
+]

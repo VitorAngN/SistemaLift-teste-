@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "nome": "MESA NARA REDONDA",
+    "valor": 1499
+  },
+  {
+    "id": 2,
+    "nome": "POLTRONA VÊNETO",
+    "valor": 2499
+  },
+  {
+    "id": 3,
+    "nome": "ARANDELA SAPHIRA",
+    "valor": 299
+  },
+  {
+    "id": 4,
+    "nome": "SOFÁ ALPHA",
+    "valor": 7999
+  },
+  {
+    "id": 5,
+    "nome": "CADEIRA VENEZA",
+    "valor": 199
+  },
+  {
+    "id": 6,
+    "nome": "POLTRONA OUTBACK",
+    "valor": 699
+  },
+  {
+    "id": 7,
+    "nome": "ESCRIVANINHA NARA",
+    "valor": 799
+  }
+]
