@@ -1,0 +1,216 @@
+/* Estilos das telas, inspirados na identidade visual do site do Sistema Lift:
+   fonte Poppins, cabeçalho grafite, faixas diagonais e destaque em ciano. */
+
+:root {
+  --carvao: #1d1d1b;
+  --grafite: #30302f;
+  --ardosia: #69727d;
+  --cinza: #959595;
+  --nevoa: #f2f2f2;
+  --ciano: #09bee1;
+  --ciano-escuro: #0790ab;
+  --texto: #333333;
+  --borda: #e6e6e6;
+  --erro: #b3261e;
+  --fonte: 'Poppins', 'Segoe UI', system-ui, sans-serif;
+  --largura: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte);
+  color: var(--texto);
+  background: var(--nevoa);
+}
+
+/* ---------- Cabeçalho ---------- */
+
+.topo {
+  background: var(--grafite);
+  color: #fff;
+}
+
+.topo__conteudo {
+  max-width: var(--largura);
+  margin: 0 auto;
+  padding: 18px 16px;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+
+.marca {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 1.45rem;
+  letter-spacing: 0.02em;
+}
+
+.topo__secao {
+  color: var(--cinza);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+/* ---------- Faixa do título (fundo escuro com diagonais, como no site) ---------- */
+
+.faixa {
+  color: #fff;
+  background:
+    linear-gradient(115deg, transparent 60%, rgb(255 255 255 / 0.05) 60%, rgb(255 255 255 / 0.05) 69%, transparent 69%),
+    linear-gradient(115deg, transparent 73%, rgb(255 255 255 / 0.12) 73%, rgb(255 255 255 / 0.12) 76%, transparent 76%),
+    linear-gradient(135deg, #3b3b39 0%, var(--carvao) 65%);
+}
+
+.faixa__conteudo {
+  max-width: var(--largura);
+  margin: 0 auto;
+  padding: 56px 16px 88px;
+}
+
+.titulo {
+  margin: 0;
+  padding-left: 20px;
+  border-left: 2px dotted rgb(255 255 255 / 0.6);
+  font-weight: 300;
+  font-size: clamp(1.6rem, 3.2vw, 2.25rem);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.resumo {
+  margin: 14px 0 0 22px;
+  min-height: 1.5em;
+  color: #cfcfcf;
+  font-weight: 300;
+}
+
+.resumo strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ---------- Conteúdo ---------- */
+
+.conteudo {
+  position: relative;
+  max-width: var(--largura);
+  margin: -48px auto 40px;
+  padding: 0 16px;
+}
+
+.cartao {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 12px 32px rgb(0 0 0 / 0.08);
+  overflow: hidden;
+}
+
+/* A tabela rola sozinha em telas estreitas, sem rolar a página inteira. */
+.tabela-rolagem {
+  overflow-x: auto;
+}
+
+.tabela {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+}
+
+.tabela th {
+  padding: 16px 20px;
+  background: var(--grafite);
+  color: #fff;
+  font-weight: 400;
+  font-size: 0.75rem;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.tabela td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--borda);
+}
+
+.tabela tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.tabela tbody tr:not(.mensagem):hover {
+  background: #f4fbfd;
+}
+
+.tabela .valor {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* O código do pedido é o link para a tela de detalhe (a seta do modelo). */
+.link-pedido {
+  color: var(--ciano-escuro);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link-pedido::after {
+  content: ' →';
+  display: inline-block;
+  margin-left: 4px;
+  transition: transform 0.15s;
+}
+
+.link-pedido:hover::after,
+.link-pedido:focus-visible::after {
+  transform: translateX(4px);
+}
+
+.link-pedido:focus-visible,
+.botao:focus-visible {
+  outline: 2px solid var(--ciano);
+  outline-offset: 3px;
+}
+
+/* ---------- Estados: carregando, vazio e erro ---------- */
+
+.mensagem td {
+  padding: 48px 20px;
+  color: var(--ardosia);
+  text-align: center;
+}
+
+.mensagem--erro td {
+  color: var(--erro);
+}
+
+.botao {
+  margin-top: 16px;
+  padding: 10px 24px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--ciano);
+  color: #fff;
+  font: 600 0.75rem var(--fonte);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background: var(--ciano-escuro);
+}
+
+/* ---------- Rodapé ---------- */
+
+.rodape {
+  padding: 8px 16px 40px;
+  color: var(--cinza);
+  font-size: 0.8rem;
+  text-align: center;
+}

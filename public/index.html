@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lista de Pedidos · Sistema Lift</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <header class="topo">
+      <div class="topo__conteudo">
+        <a class="marca" href="./">Sistema Lift</a>
+        <span class="topo__secao">Pedidos</span>
+      </div>
+    </header>
+
+    <section class="faixa">
+      <div class="faixa__conteudo">
+        <h1 class="titulo">Lista de Pedidos</h1>
+        <p class="resumo" id="resumo" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <main class="conteudo">
+      <div class="cartao">
+        <div class="tabela-rolagem">
+          <table class="tabela" id="pedidos">
+            <thead>
+              <tr>
+                <th scope="col">Pedido</th>
+                <th scope="col">Cliente</th>
+                <th scope="col">Data</th>
+                <th scope="col" class="valor">Valor</th>
+              </tr>
+            </thead>
+            <tbody aria-live="polite"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <footer class="rodape">Dados da API do Sistema Lift</footer>
+
+    <script type="module" src="js/lista.js"></script>
+  </body>
+</html>
