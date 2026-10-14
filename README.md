@@ -1,6 +1,6 @@
 # Sistema Lift · Pedidos
 
-Aplicação web que consome a [API do Sistema Lift](https://sistemalift1.com.br/lift_ps/api/) para **listar os pedidos** e mostrar as **informações de cada pedido** (cliente, itens e total), seguindo o modelo enviado no processo seletivo.
+Aplicação web que consome a API do Sistema Lift ([exemplo: lista de pedidos](https://sistemalift1.com.br/lift_ps/api/Pedidos)) para **listar os pedidos** e mostrar as **informações de cada pedido** (cliente, itens e total), seguindo o modelo enviado no processo seletivo.
 
 Feita com **Node.js + Express** no servidor e **HTML, CSS e JavaScript puros** nas telas. O visual se inspira na identidade do site do Sistema Lift (fonte Poppins, tons de grafite e destaque em ciano).
 
