@@ -1,0 +1,142 @@
+/* Estilos só da tela "Informações do Pedido". Os comuns (cores, cabeçalho,
+   faixa, cartão e tabela) vêm de estilos.css. */
+
+[hidden] {
+  display: none !important;
+}
+
+/* ---------- Faixa: voltar, título e número do pedido ---------- */
+
+.voltar {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--ciano);
+  font-size: 0.85rem;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.voltar:hover,
+.voltar:focus-visible {
+  text-decoration: underline;
+}
+
+.cabecalho-pedido {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px 24px;
+}
+
+.numero-pedido {
+  font-weight: 300;
+  font-size: clamp(1.6rem, 3.2vw, 2.25rem);
+}
+
+.numero-pedido span {
+  color: var(--cinza);
+}
+
+/* ---------- Dados do Cliente ---------- */
+
+.cartao__titulo {
+  margin: 0;
+  padding: 16px 20px;
+  background: var(--grafite);
+  color: #fff;
+  font-weight: 400;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+/* <dl>: lista de "rótulo -> valor", o HTML certo para dados como estes. */
+.dados-cliente {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px 24px;
+  margin: 0;
+  padding: 22px 20px;
+}
+
+.dados-cliente dt {
+  margin-bottom: 4px;
+  color: var(--cinza);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.dados-cliente dd {
+  margin: 0;
+  overflow-wrap: anywhere; /* e-mails longos quebram em vez de vazar */
+}
+
+.dados-cliente__email {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 640px) {
+  .dados-cliente {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Itens do Pedido ---------- */
+
+.secao-titulo {
+  margin: 36px 0 14px;
+  padding-left: 14px;
+  border-left: 2px dotted var(--cinza);
+  color: var(--grafite);
+  font-weight: 300;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.tabela .detalhe-conta {
+  display: block;
+  color: var(--cinza);
+  font-size: 0.75rem;
+}
+
+/* ---------- Total ---------- */
+
+.total {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  gap: 16px;
+  margin: 24px 0 0;
+  color: var(--ardosia);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.total strong {
+  color: var(--carvao);
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Carregando e erro ---------- */
+
+.estado {
+  padding: 48px 20px;
+  color: var(--ardosia);
+  text-align: center;
+}
+
+.estado--erro {
+  color: var(--erro);
+}
+
+a.botao {
+  display: inline-block;
+  text-decoration: none;
+}

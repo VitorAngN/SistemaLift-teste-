@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Informações do Pedido · Sistema Lift</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/pedido.css" />
+  </head>
+  <body>
+    <header class="topo">
+      <div class="topo__conteudo">
+        <a class="marca" href="./">Sistema Lift</a>
+        <span class="topo__secao">Pedidos</span>
+      </div>
+    </header>
+
+    <section class="faixa">
+      <div class="faixa__conteudo">
+        <a class="voltar" href="./">← Lista de pedidos</a>
+        <div class="cabecalho-pedido">
+          <h1 class="titulo">Informações do Pedido</h1>
+          <span class="numero-pedido" id="numero-pedido"></span>
+        </div>
+      </div>
+    </section>
+
+    <main class="conteudo">
+      <!-- Carregando ou erro: some quando o pedido é exibido. -->
+      <div class="cartao estado" id="estado" aria-live="polite"></div>
+
+      <div id="detalhe" hidden>
+        <section class="cartao" aria-labelledby="titulo-cliente">
+          <h2 class="cartao__titulo" id="titulo-cliente">Dados do Cliente</h2>
+          <dl class="dados-cliente">
+            <div>
+              <dt>Nome</dt>
+              <dd id="cliente-nome"></dd>
+            </div>
+            <div>
+              <dt>CPF</dt>
+              <dd id="cliente-cpf"></dd>
+            </div>
+            <div>
+              <dt>Data</dt>
+              <dd id="pedido-data"></dd>
+            </div>
+            <div class="dados-cliente__email">
+              <dt>E-mail</dt>
+              <dd id="cliente-email"></dd>
+            </div>
+          </dl>
+        </section>
+
+        <h2 class="secao-titulo" id="titulo-itens">Itens do Pedido</h2>
+        <section class="cartao" aria-labelledby="titulo-itens">
+          <div class="tabela-rolagem">
+            <table class="tabela" id="itens">
+              <thead>
+                <tr>
+                  <th scope="col">Código</th>
+                  <th scope="col">Produto</th>
+                  <th scope="col" class="valor">Quantidade</th>
+                  <th scope="col" class="valor">Valor</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </section>
+
+        <p class="total">Total <strong id="total"></strong></p>
+      </div>
+    </main>
+
+    <footer class="rodape">Dados da API do Sistema Lift</footer>
+
+    <script type="module" src="js/pedido.js"></script>
+  </body>
+</html>
