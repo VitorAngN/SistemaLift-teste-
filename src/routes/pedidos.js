@@ -4,8 +4,8 @@
 import { Router } from 'express';
 import { ErroRequisicaoInvalida } from '../utils/erros.js';
 
-// O id chega da URL sempre como texto. Aceita só dígitos ("10") e recusa
-// "abc", "1.5", "-1", "0", "1e1" e "0x10" (que o Number() aceitaria).
+// Aceita só dígitos. Recusa "abc", "1.5", "-1" e "0", e também "1e1" e "0x10",
+// que o Number() sozinho aceitaria.
 function lerIdPedido(texto) {
   const id = Number(texto);
   if (!/^\d+$/.test(texto) || id <= 0 || !Number.isSafeInteger(id)) {
@@ -14,7 +14,7 @@ function lerIdPedido(texto) {
   return id;
 }
 
-// `servico` é recebido por parâmetro (o pedidoService de verdade, ou um falso nos testes).
+// Recebe o service por parâmetro para os testes poderem usar um falso.
 export function criarRotasPedidos(servico) {
   const rotas = Router();
 

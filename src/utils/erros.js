@@ -1,8 +1,5 @@
-// Erros da aplicação. Cada classe já carrega o status HTTP que representa,
-// assim o middleware de erro (Etapa 3) só precisa ler erro.status.
-//
-// O segundo parâmetro aceita { cause: erroOriginal }, para não perder
-// o erro que deu origem a este (ex.: o timeout do fetch).
+// Erros da aplicação. Cada um já carrega o seu status HTTP, e o segundo
+// parâmetro aceita { cause } para guardar o erro original.
 
 export class ErroAplicacao extends Error {
   constructor(mensagem, status, opcoes) {

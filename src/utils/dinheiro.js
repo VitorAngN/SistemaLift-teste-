@@ -1,9 +1,5 @@
-// Todo cálculo de dinheiro do projeto é feito em CENTAVOS INTEIROS.
-//
-// Motivo: o Number do JavaScript é ponto flutuante binário (IEEE 754) e não
-// representa 0,10 exatamente: 0.1 + 0.2 resulta em 0.30000000000000004.
-// Inteiros (até 2^53) são exatos, então somar centavos nunca acumula erro.
-// A conversão para reais acontece só no final, para exibir.
+// Os cálculos de dinheiro são feitos em centavos inteiros: em ponto flutuante,
+// 0.1 + 0.2 dá 0.30000000000000004, e inteiros não têm esse erro.
 
 function exigirNumero(valor, nome) {
   if (!Number.isFinite(valor)) {
@@ -11,7 +7,7 @@ function exigirNumero(valor, nome) {
   }
 }
 
-// 1499 (reais) -> 149900 (centavos). Math.round corrige resíduos como 19.99 * 100 = 1998.9999999999998.
+// 1499 -> 149900. O Math.round corrige casos como 19.99 * 100 = 1998.9999999999998.
 export function paraCentavos(valorEmReais) {
   exigirNumero(valorEmReais, 'valor');
   return Math.round(valorEmReais * 100);

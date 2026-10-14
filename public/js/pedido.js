@@ -1,6 +1,5 @@
-// Tela "Informações do Pedido": lê o id da URL (pedido.html?id=10),
-// busca /api/pedidos/10 e preenche os dados do cliente, os itens e o total.
-// Como na lista, tudo entra com textContent (nunca innerHTML).
+// Tela "Informações do Pedido": lê o id da URL (pedido.html?id=10), busca o
+// pedido na nossa API e preenche a tela. Os textos entram com textContent.
 
 import { buscarJson } from './api.js';
 import { formatarMoeda, formatarData, formatarQuantidade } from './formatar.js';

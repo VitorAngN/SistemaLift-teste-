@@ -1,6 +1,5 @@
 // Dados de teste: a "foto" da API Lift salva em dados/ por `npm run coletar`.
 // Assim os testes usam dados reais sem depender da internet.
-// (Este arquivo não termina em .test.js, então o node --test não o executa como teste.)
 
 import { readFileSync } from 'node:fs';
 

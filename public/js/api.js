@@ -1,4 +1,4 @@
-// Chamadas do navegador para a NOSSA API (/api/...), nunca direto para a Lift.
+// Chamadas do navegador para a nossa API (/api/...).
 
 // Busca um JSON e, se a resposta for de erro, lança um Error com a mensagem
 // que o servidor mandou em { "erro": "..." } e o status HTTP.
