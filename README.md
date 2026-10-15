@@ -157,7 +157,7 @@ Cada etapa entrou por um pull request próprio, com commits pequenos no padrão 
 ## Próximos passos
 
 - Migrar para TypeScript, começando pelos utilitários.
-- Cache com tempo de expiração para clientes e produtos, que mudam pouco.
+- Escalabilidade: cache com tempo de expiração para clientes e produtos, que mudam pouco, para reduzir as chamadas à API com muitos acessos; e paginação na lista, para quando o número de pedidos crescer.
 - Testes de ponta a ponta das telas (Playwright).
 
 ## Ferramentas utilizadas
